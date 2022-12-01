@@ -1,0 +1,27 @@
+from random import randint
+user=0
+computer=0
+items=["rock","paper","scissor"]
+while True:
+  a=input("Enter your item and q for quit:"). lower()
+  r=randint(0,2)
+  if a=="q":
+    break
+  b=items[r]
+  print("Computer picked item:",b)
+  if b=="rock" and a=="paper":
+    print("Oops! You lost")
+    computer+=1
+  elif b=="rock" and a=="scissor":
+    print("Oops! You lost")
+    computer+=1
+    
+  elif a=="paper" and b=="scissor":
+    print("Oops! You lost")
+    computer+=1
+  elif a==b:
+    print("Tie")
+  else:
+    print("You won")
+    user+=1
+    
